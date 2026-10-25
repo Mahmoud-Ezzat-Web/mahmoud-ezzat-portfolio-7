@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ستايل فاشون - أحدث صيحات الملابس والأزياء</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-bag-shopping"></i> ستايل <span>فاشون</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="active">الرئيسية</a>
+                <a href="#products">المنتجات</a>
+                <a href="#features">مميزاتنا</a>
+                <a href="#contact">تواصل معنا</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shopping Cart Modal Sidebar -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3>عربة التسوق</h3>
+            <span class="close-cart" id="closeCart">&times;</span>
+        </div>
+        <div class="cart-body" id="cartItems">
+            <p class="empty-cart-msg">عربة التسوق فارغة حالياً</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-price">
+                <span>الإجمالي:</span>
+                <span id="cartTotal">0 ج.م</span>
+            </div>
+            <button class="btn btn-primary btn-block">إتمام الشراء</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="badge"><i class="fa-solid fa-tags"></i> خصومات تصل إلى 40%</span>
+            <h1>تألق بأحدث صيحات الأزياء العصرية</h1>
+            <p>تشكيلة راقية من أجود خامات الملابس للرجالي والحريمي لتناسب جميع الأذواق والمناسبات.</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">تسوق الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products section-padding" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>أحدث المنتجات والتشكيلات</h2>
+                <p>اختر ما يناسب ذوقك واكتشف الأناقة معنا</p>
+            </div>
+            <div class="grid-cards">
+                <!-- Product 1 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80" alt="تيشيرت كاجوال">
+                        <span class="tag-sale">خصم</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>تيشيرت قطني كاجوال</h3>
+                        <p class="price">350 ج.م <span class="old-price">450 ج.م</span></p>
+                        <button class="btn btn-outline add-to-cart" data-name="تيشيرت قطني كاجوال" data-price="350">
+                            <i class="fa-solid fa-cart-plus"></i> أضف للسلة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80" alt="جاكيت جلد">
+                    </div>
+                    <div class="card-body">
+                        <h3>جاكيت جلد عصري</h3>
+                        <p class="price">1,200 ج.م</p>
+                        <button class="btn btn-outline add-to-cart" data-name="جاكيت جلد عصري" data-price="1200">
+                            <i class="fa-solid fa-cart-plus"></i> أضف للسلة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80" alt="حذاء رياضي">
+                        <span class="tag-sale">الأكثر مبيعاً</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>حذاء رياضي أنيق</h3>
+                        <p class="price">850 ج.م</p>
+                        <button class="btn btn-outline add-to-cart" data-name="حذاء رياضي أنيق" data-price="850">
+                            <i class="fa-solid fa-cart-plus"></i> أضف للسلة
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features section-padding" id="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h3>شحن سريع</h3>
+                    <p>توصيل لجميع المحافظات خلال 2-4 أيام عمل.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <h3>استرجاع واستبدال</h3>
+                    <p>إمكانية المعاينة والاستبدال خلال 14 يوماً من الشراء.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-shield-cat"></i>
+                    <h3>جودة مضمونة 100%</h3>
+                    <p>أفضل الخامات والتصاميم المعتمدة عالمياً.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <a href="#" class="logo footer-logo">
+                    <i class="fa-solid fa-bag-shopping"></i> ستايل <span>فاشون</span>
+                </a>
+                <p>متجرك المفضل للأزياء العصرية والملابس الراشقة بأفضل الأسعار.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>تواصل معنا</h4>
+                <p><i class="fa-solid fa-phone"></i> 01099998888</p>
+                <p><i class="fa-solid fa-envelope"></i> support@stylefashion.com</p>
+            </div>
+            <div class="footer-social">
+                <h4>تابعنا</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2026 متجر ستايل فاشون.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
